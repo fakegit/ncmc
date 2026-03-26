@@ -1,36 +1,37 @@
-# ncmc &middot; [![Build Status](https://travis-ci.org/magic-akari/ncmc.svg?branch=master)](https://travis-ci.org/magic-akari/ncmc) [![Build status](https://ci.appveyor.com/api/projects/status/qj0uc19p1oxuxn0v?svg=true)](https://ci.appveyor.com/project/magic-akari/ncmc) [![Crates.io](https://img.shields.io/crates/v/ncmc.svg?label=ncmc)](https://crates.io/crates/ncmc)
+# ncmc &middot; [![Test](https://github.com/magic-akari/ncmc/actions/workflows/test.yml/badge.svg)](https://github.com/magic-akari/ncmc/actions/workflows/test.yml) [![Crates.io](https://img.shields.io/crates/v/ncmc.svg?label=ncmc)](https://crates.io/crates/ncmc)
 
-## How do I get it?
+## Install
 
-install from cargo or download from [GitHub Release](https://github.com/magic-akari/ncmc/releases)
+### Option 1: Download from GitHub Release
 
-Install
+For users who prefer a pre-built binary, you can download the latest release from [![GitHub Release](https://img.shields.io/badge/build-Release-brightgreen?style=flat&logo=github&label=GitHub)](https://github.com/magic-akari/ncmc/releases/latest)
 
+### Option 2: Install with Cargo
+
+If you have Rust installed, you can install ncmc with cargo:
+
+```bash
+cargo install ncmc
 ```
-> cargo install ncmc
+
+Additionally, [cargo binstall](https://github.com/cargo-bins/cargo-binstall) is supported.
+It fetch the pre-built binary from GitHub Release and fallback to build from source if not available.
+
+```bash
+cargo binstall ncmc
 ```
 
 If you don’t have cargo, install it with
-https://rustup.rs.
+https://rustup.rs
 
-## How do I use it?
+## Usage
 
-convert all ncm files in current directory
+```bash
+# convert
+ncmc path/to/your/file.ncm
 
-```
-ncmc
-```
-
-use with a path
-
-```
-ncmc some/path/contains/ncm/files
-```
-
-use with file list
-
-```
-ncmc 1.ncm ../2.ncm /path/to/3.ncm
+# dump mode
+ncmc --dump path/to/your/file.ncm
 ```
 
 ---
